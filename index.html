@@ -3,1402 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>YoTePúblico/Agencia - Website</title>
-    <meta name="description" content="Gestión profesional de redes sociales: Facebook, WhatsApp, Telegram, YouTube, Instagram, Likee. Publicaciones manuales sin bots + flyers promocionales.">
-    <meta name="keywords" content="publicidad digital, redes sociales, marketing, Facebook, WhatsApp, Telegram, YouTube, Instagram, Likee, CUP, Cuba">
-    <meta name="author" content="YoTePúblico/Agencia">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta property="og:title" content="YoTePúblico/Agencia - Publicidad Digital">
-    <meta property="og:description" content="Gestión profesional de redes sociales y creación de flyers promocionales">
-    <meta property="og:type" content="website">
-    <link rel="manifest" href="manifest.json">
+    <title>YoTePúblico/Agencia · next level</title>
+    <meta name="description" content="Gestión profesional de redes sociales: publicaciones manuales + flyers · 400 CUP">
     <meta name="theme-color" content="#4f46e5">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234f46e5'/><text x='50' y='70' font-family='Arial' font-size='60' text-anchor='middle' fill='white'>YP</text></svg>">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234f46e5'/><text x='50' y='70' font-family='Arial' font-size='60' text-anchor='middle' fill='white'>YP</text></svg>">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234f46e5'/><text x='50' y='70' font-family='system-ui' font-size='60' text-anchor='middle' fill='white'>YP</text></svg>">
     <style>
-        :root {
-            --primary-50: #eef2ff;
-            --primary-100: #e0e7ff;
-            --primary-500: #6366f1;
-            --primary-600: #4f46e5;
-            --primary-700: #4338ca;
-            --success-500: #10b981;
-            --success-600: #059669;
-            --gray-50: #f9fafb;
-            --gray-100: #f3f4f6;
-            --gray-200: #e5e7eb;
-            --gray-600: #4b5563;
-            --gray-700: #374151;
-            --gray-900: #111827;
-            --white: #ffffff;
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --radius-sm: 4px;
-            --radius: 8px;
-            --radius-lg: 12px;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { color-scheme: light dark; }
         body {
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.5;
-            color: var(--gray-900);
-            background: var(--gray-50);
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-        
-        .hidden {
-            display: none !important;
-        }
-        
-        .visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-weight: 800;
-            font-size: 1.5rem;
-            color: var(--primary-600);
-            text-decoration: none;
-        }
-        
-        .logo-icon {
-            width: 2.5rem;
-            height: 2.5rem;
-            background: var(--primary-600);
-            border-radius: var(--radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: bold;
-        }
-        
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--radius);
-            font-weight: 600;
-            font-size: 1rem;
-            line-height: 1.25;
-            border: none;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-decoration: none;
-            user-select: none;
-        }
-        
-        .btn-primary {
-            background: var(--primary-600);
-            color: var(--white);
-        }
-        
-        .btn-primary:hover {
-            background: var(--primary-700);
-            transform: translateY(-1px);
-            box-shadow: var(--shadow);
-        }
-        
-        .btn-secondary {
-            background: var(--success-500);
-            color: var(--white);
-        }
-        
-        .btn-secondary:hover {
-            background: var(--success-600);
-        }
-        
-        .btn-outline {
-            background: transparent;
-            color: var(--primary-600);
-            border: 2px solid var(--primary-600);
-        }
-        
-        .btn-outline:hover {
-            background: var(--primary-600);
-            color: var(--white);
-        }
-        
-        .btn-sm {
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
-        }
-        
-        .card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow);
-            padding: 1.5rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .form-group {
-            margin-bottom: 1.25rem;
-        }
-        
-        .form-label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--gray-700);
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            border: 1px solid var(--gray-200);
-            border-radius: var(--radius);
-            font-size: 1rem;
-            transition: border-color 0.2s;
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-500);
-            box-shadow: 0 0 0 3px var(--primary-100);
-        }
-        
-        .login-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--gray-50);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            z-index: 1000;
-        }
-        
-        .login-card {
-            width: 100%;
-            max-width: 28rem;
-            animation: slideUp 0.3s ease-out;
-        }
-        
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(1rem);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .main-header {
-            position: sticky;
-            top: 0;
-            background: var(--white);
-            box-shadow: var(--shadow-sm);
-            z-index: 100;
-            backdrop-filter: blur(8px);
-            background: rgba(255, 255, 255, 0.95);
-        }
-        
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem 0;
-        }
-        
-        .user-info {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-weight: 600;
-            color: var(--gray-700);
-        }
-        
-        .hero-section {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, var(--primary-50) 0%, var(--gray-100) 100%);
-        }
-        
-        .hero-content {
-            text-align: center;
-            max-width: 48rem;
-            margin: 0 auto;
-        }
-        
-        .hero-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            color: var(--gray-900);
-        }
-        
-        .hero-title span {
-            color: var(--primary-600);
-        }
-        
-        .hero-description {
-            font-size: 1.125rem;
-            color: var(--gray-600);
-            margin-bottom: 2rem;
-        }
-        
-        .section {
-            padding: 3rem 0;
-        }
-        
-        .section-title {
-            font-size: 1.75rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 2rem;
-            color: var(--gray-900);
-        }
-        
-        .plan-card {
-            max-width: 48rem;
-            margin: 0 auto;
-        }
-        
-        .plan-header {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--gray-200);
-        }
-        
-        .plan-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--gray-900);
-        }
-        
-        .plan-price {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--primary-600);
-        }
-        
-        .plan-features {
-            list-style: none;
-            margin-bottom: 1.5rem;
-        }
-        
-        .plan-feature {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--gray-200);
-        }
-        
-        .plan-feature:last-child {
-            border-bottom: none;
-        }
-        
-        .feature-icon {
-            color: var(--success-500);
-            font-size: 1.25rem;
-            flex-shrink: 0;
-        }
-        
-        .feature-text {
-            color: var(--gray-700);
-        }
-        
-        .plan-notice {
-            background: var(--primary-50);
-            border-radius: var(--radius);
-            padding: 1rem;
-            margin-top: 1.5rem;
-            border-left: 4px solid var(--primary-500);
-            font-size: 0.95rem;
-        }
-        
-        .carousel-section {
-            margin: 0 auto;
-            max-width: 916px;
-            padding: 0 1rem;
-        }
-        
-        .carousel-container {
-            position: relative;
-            overflow: hidden;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-lg);
-            height: 500px;
-            margin-bottom: 1.5rem;
-        }
-        
-        .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            height: 100%;
-        }
-        
-        .carousel-slide {
-            min-width: 100%;
-            height: 100%;
-            position: relative;
-        }
-        
-        .carousel-image {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            object-position: center;
-            background-color: var(--primary-50);
-        }
-        
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.9);
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            font-size: 1.25rem;
-            cursor: pointer;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-            color: var(--primary-600);
-            box-shadow: var(--shadow);
-        }
-        
-        .carousel-btn:hover {
-            background: var(--white);
-            transform: translateY(-50%) scale(1.1);
-        }
-        
-        .carousel-btn-prev {
-            left: 0.75rem;
-        }
-        
-        .carousel-btn-next {
-            right: 0.75rem;
-        }
-        
-        .carousel-dots {
-            position: absolute;
-            bottom: 0.75rem;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            z-index: 10;
-        }
-        
-        .carousel-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s;
-            padding: 0;
-        }
-        
-        .carousel-dot.active {
-            background: var(--white);
-            transform: scale(1.2);
-        }
-        
-        .sms-section {
-            background: linear-gradient(135deg, var(--gray-100) 0%, var(--primary-50) 100%);
-            margin-top: 2rem;
-        }
-        
-        .sms-content {
-            max-width: 36rem;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .sms-description {
-            color: var(--gray-600);
-            margin-bottom: 1.5rem;
-        }
-        
-        .toast {
-            position: fixed;
-            bottom: 1rem;
-            right: 1rem;
-            background: var(--gray-900);
-            color: var(--white);
-            padding: 1rem 1.5rem;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-lg);
-            transform: translateY(100%);
-            opacity: 0;
-            transition: transform 0.3s, opacity 0.3s;
-            z-index: 1000;
-            max-width: 24rem;
-        }
-        
-        .toast.show {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        
-        .loading {
-            display: inline-block;
-            width: 1.25rem;
-            height: 1.25rem;
-            border: 2px solid currentColor;
-            border-radius: 50%;
-            border-top-color: transparent;
-            animation: spin 0.6s linear infinite;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
-        .install-prompt {
-            position: fixed;
-            bottom: 1rem;
-            left: 50%;
-            transform: translateX(-50%) translateY(100%);
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-lg);
-            padding: 1rem;
-            z-index: 1001;
-            width: 90%;
-            max-width: 400px;
-            transition: transform 0.3s ease-out;
-            border: 1px solid var(--gray-200);
-        }
-        
-        .install-prompt.show {
-            transform: translateX(-50%) translateY(0);
-        }
-        
-        .install-prompt-content {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .install-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--primary-600);
-            border-radius: var(--radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-        
-        .install-text {
-            flex: 1;
-        }
-        
-        .install-text h4 {
-            margin-bottom: 0.25rem;
-            color: var(--gray-900);
-        }
-        
-        .install-text p {
-            font-size: 0.875rem;
-            color: var(--gray-600);
-            margin-bottom: 0.5rem;
-        }
-        
-        .install-actions {
-            display: flex;
-            gap: 0.5rem;
-            margin-top: 0.75rem;
-        }
-        
-        .install-btn {
-            flex: 1;
-            padding: 0.5rem;
-            font-size: 0.875rem;
-        }
-        
-        .close-install {
-            background: transparent;
-            border: none;
-            color: var(--gray-600);
-            cursor: pointer;
-            padding: 0.25rem;
-            font-size: 1.25rem;
-            line-height: 1;
-        }
-        
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.4; background: #f9fafb; color: #111827;
+            min-height: 100vh; display: flex; flex-direction: column;
+        }
+        .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 1rem; }
+        .hidden { display: none !important; }
+        .logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.25rem; color: #4f46e5; text-decoration: none; }
+        .logo-icon { width: 2rem; height: 2rem; background: #4f46e5; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.25rem; padding: 0.5rem 1rem; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem; border: none; cursor: pointer; background: transparent; text-decoration: none; }
+        .btn-primary { background: #4f46e5; color: white; }
+        .btn-primary:hover { background: #4338ca; }
+        .btn-secondary { background: #10b981; color: white; }
+        .btn-secondary:hover { background: #059669; }
+        .btn-outline { border: 2px solid #4f46e5; color: #4f46e5; }
+        .btn-outline:hover { background: #4f46e5; color: white; }
+        .btn-sm { padding: 0.25rem 0.75rem; font-size: 0.8rem; }
+        .card { background: white; border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 1rem; }
+        .form-group { margin-bottom: 1rem; }
+        .form-label { display: block; margin-bottom: 0.25rem; font-weight: 600; font-size: 0.9rem; color: #374151; }
+        .form-control { width: 100%; padding: 0.5rem 0.75rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; font-size: 0.9rem; background: white; }
+        .form-control:focus { outline: 2px solid #4f46e5; outline-offset: 1px; }
+        .login-screen { position: fixed; inset: 0; background: #f9fafb; display: flex; align-items: center; justify-content: center; padding: 1rem; z-index: 1000; }
+        .login-card { width: 100%; max-width: 26rem; }
+        .main-header { position: sticky; top: 0; background: white; box-shadow: 0 1px 2px rgba(0,0,0,0.05); z-index: 100; }
+        .header-content { display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 0; }
+        .user-info { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.9rem; color: #374151; }
+        .hero-section { padding: 2rem 0; background: linear-gradient(135deg, #eef2ff 0%, #f3f4f6 100%); }
+        .hero-content { text-align: center; max-width: 48rem; margin: 0 auto; }
+        .hero-title { font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 700; line-height: 1.2; margin-bottom: 0.5rem; }
+        .hero-title span { color: #4f46e5; }
+        .hero-description { font-size: 1rem; color: #4b5563; margin-bottom: 1.5rem; }
+        .section { padding: 2rem 0; }
+        .section-title { font-size: clamp(1.25rem, 4vw, 1.75rem); font-weight: 600; text-align: center; margin-bottom: 1.5rem; }
+        .plan-card { max-width: 48rem; margin: 0 auto; }
+        .plan-header { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #e5e7eb; }
+        .plan-title { font-size: 1.25rem; font-weight: 700; }
+        .plan-price { font-size: 2rem; font-weight: 800; color: #4f46e5; line-height: 1; }
+        .plan-features { list-style: none; margin-bottom: 1rem; }
+        .plan-feature { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb; }
+        .plan-feature:last-child { border-bottom: none; }
+        .feature-icon { color: #10b981; font-size: 1.2rem; flex-shrink: 0; }
+        .plan-notice { background: #eef2ff; border-radius: 0.5rem; padding: 0.75rem; margin-top: 1rem; border-left: 4px solid #4f46e5; font-size: 0.9rem; }
+        .carousel-section { margin: 0 auto; max-width: 900px; }
+        .carousel-container { position: relative; overflow: hidden; border-radius: 0.75rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1); height: clamp(300px, 50vw, 450px); background: #eef2ff; }
+        .carousel-track { display: flex; height: 100%; }
+        .carousel-slide { min-width: 100%; height: 100%; }
+        .carousel-image { width: 100%; height: 100%; object-fit: contain; background: #eef2ff; }
+        .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: none; width: 2.5rem; height: 2.5rem; border-radius: 50%; font-size: 1.5rem; cursor: pointer; color: #4f46e5; box-shadow: 0 2px 4px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; }
+        .carousel-btn:hover { background: white; }
+        .carousel-btn-prev { left: 0.5rem; }
+        .carousel-btn-next { right: 0.5rem; }
+        .carousel-dots { position: absolute; bottom: 0.75rem; left: 0; right: 0; display: flex; justify-content: center; gap: 0.5rem; z-index: 10; }
+        .carousel-dot { width: 0.75rem; height: 0.75rem; border-radius: 50%; background: rgba(255,255,255,0.6); border: none; cursor: pointer; padding: 0; }
+        .carousel-dot.active { background: white; }
+        .sms-section { background: linear-gradient(135deg, #f3f4f6 0%, #eef2ff 100%); margin-top: 1rem; }
+        .sms-content { max-width: 36rem; margin: 0 auto; text-align: center; }
+        .toast { position: fixed; bottom: 1rem; right: 1rem; background: #1f2937; color: white; padding: 0.75rem 1.25rem; border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 2000; max-width: 24rem; }
+        .install-prompt { position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%); background: white; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); padding: 0.75rem; z-index: 2100; width: calc(100% - 2rem); max-width: 360px; border: 1px solid #e5e7eb; }
+        .install-prompt-content { display: flex; align-items: center; gap: 0.75rem; position: relative; }
+        .install-icon { width: 2.5rem; height: 2.5rem; background: #4f46e5; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.25rem; flex-shrink: 0; }
+        .install-text h4 { font-size: 1rem; margin-bottom: 0.1rem; }
+        .install-text p { font-size: 0.8rem; color: #4b5563; margin-bottom: 0.5rem; }
+        .install-actions { display: flex; gap: 0.5rem; }
+        .install-btn { padding: 0.25rem 0.5rem; font-size: 0.8rem; }
+        .close-install { position: absolute; top: -0.25rem; right: -0.25rem; background: white; border: 1px solid #e5e7eb; border-radius: 50%; width: 1.5rem; height: 1.5rem; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #6b7280; }
         @media (max-width: 640px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-            
-            .section {
-                padding: 2rem 0;
-            }
-            
-            .section-title {
-                font-size: 1.5rem;
-                margin-bottom: 1.5rem;
-            }
-            
-            .plan-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .carousel-container {
-                height: 400px;
-            }
-            
-            .carousel-btn {
-                width: 36px;
-                height: 36px;
-                font-size: 1rem;
-            }
-            
-            .carousel-btn-prev {
-                left: 0.5rem;
-            }
-            
-            .carousel-btn-next {
-                right: 0.5rem;
-            }
-            
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-            
-            .install-prompt {
-                width: calc(100% - 2rem);
-            }
+            .header-content { flex-direction: column; gap: 0.5rem; }
+            .plan-header { flex-direction: column; align-items: flex-start; }
         }
-        
-        @media (min-width: 641px) and (max-width: 768px) {
-            .hero-title {
-                font-size: 2.25rem;
-            }
-            
-            .carousel-container {
-                height: 450px;
-            }
-        }
-        
-        @media (min-width: 769px) {
-            .container {
-                padding: 0 2rem;
-            }
-            
-            .hero-section {
-                padding: 5rem 0;
-            }
-            
-            .section {
-                padding: 4rem 0;
-            }
-            
-            .carousel-container {
-                height: 550px;
-            }
-        }
-        
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-            
-            html {
-                scroll-behavior: auto;
-            }
-        }
-        
         @media (prefers-color-scheme: dark) {
-            :root {
-                --primary-50: #1e1b4b;
-                --primary-100: #312e81;
-                --primary-600: #818cf8;
-                --gray-50: #111827;
-                --gray-100: #1f2937;
-                --gray-200: #374151;
-                --gray-600: #d1d5db;
-                --gray-700: #e5e7eb;
-                --gray-900: #f9fafb;
-                --white: #1f2937;
-            }
-            
-            .main-header {
-                background: rgba(31, 41, 55, 0.95);
-            }
-            
-            .carousel-btn {
-                background: rgba(31, 41, 55, 0.9);
-                color: var(--primary-100);
-            }
-            
-            .install-prompt {
-                background: var(--gray-100);
-                border-color: var(--gray-200);
-            }
+            body { background: #111827; color: #f9fafb; }
+            .card, .main-header, .install-prompt { background: #1f2937; }
+            .form-control { background: #374151; border-color: #4b5563; color: white; }
+            .hero-section, .sms-section { background: #1e1b4b; }
+            .plan-notice { background: #312e81; color: white; }
+            .carousel-container { background: #1e1b4b; }
+            .carousel-btn { background: #374151; color: #818cf8; }
         }
     </style>
 </head>
 <body>
     <div class="login-screen" id="loginScreen">
         <div class="login-card card">
-            <div class="logo" style="justify-content: center; margin-bottom: 1.5rem;">
-                <div class="logo-icon">YP</div>
-                <span>YoTePúblico/Agencia</span>
+            <div class="logo" style="justify-content:center; margin-bottom:1rem">
+                <div class="logo-icon">YP</div><span>YoTePúblico</span>
             </div>
-            
-            <h1 class="section-title" style="font-size: 1.75rem; margin-bottom: 0.5rem;">Registro de Negocio</h1>
-            <p style="text-align: center; color: var(--gray-600); margin-bottom: 2rem;">
-                Complete los datos requeridos para acceder a nuestros servicios
-            </p>
-            
+            <h2 class="section-title" style="font-size:1.4rem; margin-bottom:0.25rem">Registro</h2>
+            <p style="text-align:center; color:#6b7280; margin-bottom:1.5rem; font-size:0.9rem">datos de tu negocio</p>
             <form id="loginForm">
-                <div class="form-group">
-                    <label for="businessName" class="form-label">
-                        Nombre de tu negocio *
-                    </label>
-                    <input type="text" id="businessName" class="form-control" required autocomplete="organization">
-                </div>
-                
-                <div class="form-group">
-                    <label for="businessDescription" class="form-label">
-                        Descripción completa de tu negocio *
-                    </label>
-                    <textarea id="businessDescription" class="form-control" rows="3" required></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label for="businessLinks" class="form-label">
-                        Enlaces (separados por comas)
-                    </label>
-                    <input type="text" id="businessLinks" class="form-control" autocomplete="url">
-                </div>
-                
-                <div class="form-group">
-                    <label for="businessPhone" class="form-label">
-                        Número de teléfono *
-                    </label>
-                    <input type="tel" id="businessPhone" class="form-control" required autocomplete="tel">
-                </div>
-                
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
-                    Acceder a la Plataforma
-                </button>
+                <div class="form-group"><label class="form-label" for="businessName">Negocio *</label><input type="text" id="businessName" class="form-control" required autocomplete="organization"></div>
+                <div class="form-group"><label class="form-label" for="businessDescription">Descripción *</label><textarea id="businessDescription" class="form-control" rows="2" required></textarea></div>
+                <div class="form-group"><label class="form-label" for="businessLinks">Enlaces (separados por comas)</label><input type="text" id="businessLinks" class="form-control" autocomplete="url"></div>
+                <div class="form-group"><label class="form-label" for="businessPhone">Teléfono *</label><input type="tel" id="businessPhone" class="form-control" required autocomplete="tel"></div>
+                <button type="submit" class="btn btn-primary" style="width:100%">Acceder</button>
             </form>
-            
-            <div style="margin-top: 1.5rem; text-align: center;">
-                <button id="installAppBtn" class="btn btn-outline" style="width: 100%;">
-                    📲 Instalar Aplicación
-                </button>
-                <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 0.5rem;">
-                    Instala nuestra app para una mejor experiencia
-                </p>
-            </div>
+            <div style="margin-top:1rem; text-align:center"><button id="installAppBtn" class="btn btn-outline" style="width:100%">📲 Instalar app</button></div>
         </div>
     </div>
-    
     <div class="main-content hidden" id="mainContent">
-        <header class="main-header">
-            <div class="container">
-                <div class="header-content">
-                    <a href="#" class="logo">
-                        <div class="logo-icon">YP</div>
-                        <span>YoTePúblico/Agencia</span>
-                    </a>
-                    
-                    <div class="header-actions">
-                        <div class="user-info" id="userInfo"></div>
-                        <button class="btn btn-outline btn-sm" id="logoutBtn">Cerrar Sesión</button>
-                    </div>
-                </div>
-            </div>
-        </header>
-        
+        <header class="main-header"><div class="container"><div class="header-content"><a href="#" class="logo"><div class="logo-icon">YP</div><span>YoTePúblico/Agencia</span></a><div class="header-actions"><span class="user-info" id="userInfo"></span><button class="btn btn-outline btn-sm" id="logoutBtn">Salir</button></div></div></div></header>
         <main>
-            <section class="hero-section">
-                <div class="container">
-                    <div class="hero-content">
-                        <h1 class="hero-title">🚀 <span>YoTePúblico/Agencia</span></h1>
-                        <p class="hero-description">
-                            Soluciones profesionales de publicidad digital. Gestionamos tu presencia en redes sociales 
-                            y creamos contenido visual impactante para impulsar tu negocio.
-                        </p>
-                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                            <a href="#servicios" class="btn btn-primary">Ver Servicios</a>
-                            <a href="#flyers" class="btn btn-outline">Ver Ejemplos</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="section" id="servicios">
-                <div class="container">
-                    <h2 class="section-title">Plan de Servicios Premium</h2>
-                    
-                    <div class="plan-card card">
-                        <div class="plan-header">
-                            <h3 class="plan-title">Publicación Integral en Redes Sociales</h3>
-                            <div class="plan-price">400 CUP</div>
-                        </div>
-                        
-                        <ul class="plan-features">
-                            <li class="plan-feature">
-                                <span class="feature-icon">✅</span>
-                                <span class="feature-text">Facebook - Perfil + Grupo</span>
-                            </li>
-                            <li class="plan-feature">
-                                <span class="feature-icon">✅</span>
-                                <span class="feature-text">WhatsApp - Canal + Comunidad</span>
-                            </li>
-                            <li class="plan-feature">
-                                <span class="feature-icon">✅</span>
-                                <span class="feature-text">Telegram - Canal + Grupo</span>
-                            </li>
-                            <li class="plan-feature">
-                                <span class="feature-icon">✅</span>
-                                <span class="feature-text">YouTube - Canal + Comunidad</span>
-                            </li>
-                            <li class="plan-feature">
-                                <span class="feature-icon">✅</span>
-                                <span class="feature-text">Instagram - Perfil Completo</span>
-                            </li>
-                            <li class="plan-feature">
-                                <span class="feature-icon">✅</span>
-                                <span class="feature-text">Likee - Perfil Optimizado</span>
-                            </li>
-                            <li class="plan-feature">
-                                <span class="feature-icon">✅</span>
-                                <span class="feature-text">Página Web - Sección de Flyers</span>
-                            </li>
-                        </ul>
-                        
-                        <div class="plan-notice">
-                            <p><strong>💲 400 CUP por publicación</strong></p>
-                            <p style="margin-top: 0.5rem;">
-                                Las publicaciones son por contenido específico, no por tiempo. 
-                                Todo el trabajo se realiza manualmente sin bots. Usted envía su material 
-                                y nosotros lo publicamos en todas las plataformas incluyendo un flyer promocional.
-                            </p>
-                        </div>
-                        
-                        <div style="text-align: center; margin-top: 2rem;">
-                            <button class="btn btn-secondary" id="selectPlanBtn">
-                                Seleccionar este Plan
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="section" id="flyers">
-                <div class="container">
-                    <h2 class="section-title">Ejemplos de Flyers</h2>
-                    
-                    <div class="carousel-section">
-                        <div class="carousel-container" id="carouselContainer">
-                            <div class="carousel-track" id="carouselTrack"></div>
-                            <button class="carousel-btn carousel-btn-prev" id="carouselPrev">‹</button>
-                            <button class="carousel-btn carousel-btn-next" id="carouselNext">›</button>
-                            <div class="carousel-dots" id="carouselDots"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="section sms-section">
-                <div class="container">
-                    <div class="sms-content">
-                        <h2 class="section-title" style="color: var(--gray-900);">Enviar Solicitud</h2>
-                        <p class="sms-description">
-                            Envía toda la información de tu negocio y el plan seleccionado directamente 
-                            a nuestro equipo. Los datos se organizarán automáticamente en un mensaje claro.
-                        </p>
-                        
-                        <button class="btn btn-secondary" id="sendSmsBtn" style="min-width: 200px;">
-                            📱 Enviar Solicitud por SMS
-                        </button>
-                    </div>
-                </div>
-            </section>
+            <section class="hero-section"><div class="container"><div class="hero-content"><h1 class="hero-title">🚀 <span>YoTePúblico/Agencia</span></h1><p class="hero-description">Publicación manual en 6 redes + flyer · 400 CUP</p><div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap"><a href="#servicios" class="btn btn-primary">Ver plan</a><a href="#flyers" class="btn btn-outline">Ejemplos</a></div></div></div></section>
+            <section class="section" id="servicios"><div class="container"><h2 class="section-title">Plan único</h2><div class="plan-card card"><div class="plan-header"><h3 class="plan-title">Publicación Unica</h3><div class="plan-price">400 CUP</div></div><ul class="plan-features"><li class="plan-feature"><span class="feature-icon">✅</span> Facebook (Perfil+Grupo)</li><li class="plan-feature"><span class="feature-icon">✅</span> WhatsApp (Canal+Comunidad)</li><li class="plan-feature"><span class="feature-icon">✅</span> Telegram (Canal+Grupo)</li><li class="plan-feature"><span class="feature-icon">✅</span> YouTube (Canal+Comunidad)</li><li class="plan-feature"><span class="feature-icon">✅</span> Instagram (Perfil)</li><li class="plan-feature"><span class="feature-icon">✅</span> Likee (Perfil)</li><li class="plan-feature"><span class="feature-icon">✅</span> Web + flyer</li></ul><div class="plan-notice"><strong>💲 400 CUP por publicación</strong> · manual, sin bots, flyer incluido</div><div style="text-align:center; margin-top:1.5rem"><button class="btn btn-secondary" id="selectPlanBtn">Seleccionar plan</button></div></div></div></section>
+            <section class="section" id="flyers"><div class="container"><h2 class="section-title">Flyers recientes</h2><div class="carousel-section"><div class="carousel-container" id="carouselContainer"><div class="carousel-track" id="carouselTrack"></div><button class="carousel-btn carousel-btn-prev" id="carouselPrev">‹</button><button class="carousel-btn carousel-btn-next" id="carouselNext">›</button><div class="carousel-dots" id="carouselDots"></div></div></div></div></section>
+            <section class="section sms-section"><div class="container"><div class="sms-content"><h2 class="section-title">Enviar solicitud</h2><p class="sms-description" style="color:#4b5563; margin-bottom:1rem">Tus datos + plan vía SMS</p><button class="btn btn-secondary" id="sendSmsBtn">📱 Enviar SMS</button></div></div></section>
         </main>
     </div>
-    
-    <div class="install-prompt" id="installPrompt">
-        <div class="install-prompt-content">
-            <button class="close-install" id="closeInstall">&times;</button>
-            <div class="install-icon">📱</div>
-            <div class="install-text">
-                <h4>Instalar YoTePúblico</h4>
-                <p>Instala nuestra aplicación para acceder más rápido y trabajar sin conexión</p>
-                <div class="install-actions">
-                    <button class="btn btn-primary install-btn" id="installButton">Instalar</button>
-                    <button class="btn btn-outline install-btn" id="laterButton">Después</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="toast" id="toast"></div>
-    
+    <div class="install-prompt hidden" id="installPrompt"><div class="install-prompt-content"><button class="close-install" id="closeInstall">&times;</button><div class="install-icon">📱</div><div class="install-text"><h4>Instalar YoTePúblico</h4><p>acceso rápido sin conexión</p><div class="install-actions"><button class="btn btn-primary install-btn" id="installButton">Instalar</button><button class="btn btn-outline install-btn" id="laterButton">Luego</button></div></div></div></div>
+    <div class="toast hidden" id="toast"></div>
     <script>
-        (function() {
-            'use strict';
-            
-            const DOM = {
-                loginScreen: document.getElementById('loginScreen'),
-                mainContent: document.getElementById('mainContent'),
-                loginForm: document.getElementById('loginForm'),
-                logoutBtn: document.getElementById('logoutBtn'),
-                userInfo: document.getElementById('userInfo'),
-                selectPlanBtn: document.getElementById('selectPlanBtn'),
-                sendSmsBtn: document.getElementById('sendSmsBtn'),
-                toast: document.getElementById('toast'),
-                carouselContainer: document.getElementById('carouselContainer'),
-                carouselTrack: document.getElementById('carouselTrack'),
-                carouselPrev: document.getElementById('carouselPrev'),
-                carouselNext: document.getElementById('carouselNext'),
-                carouselDots: document.getElementById('carouselDots'),
-                installAppBtn: document.getElementById('installAppBtn'),
-                installPrompt: document.getElementById('installPrompt'),
-                installButton: document.getElementById('installButton'),
-                laterButton: document.getElementById('laterButton'),
-                closeInstall: document.getElementById('closeInstall')
+        (function(){
+            const D = {
+                loginScreen: g('loginScreen'), mainContent: g('mainContent'), loginForm: g('loginForm'),
+                logoutBtn: g('logoutBtn'), userInfo: g('userInfo'), selectPlanBtn: g('selectPlanBtn'),
+                sendSmsBtn: g('sendSmsBtn'), toast: g('toast'), carouselTrack: g('carouselTrack'),
+                carouselPrev: g('carouselPrev'), carouselNext: g('carouselNext'), carouselDots: g('carouselDots'),
+                installAppBtn: g('installAppBtn'), installPrompt: g('installPrompt'),
+                installButton: g('installButton'), laterButton: g('laterButton'), closeInstall: g('closeInstall')
             };
-            
-            const STATE = {
-                userData: null,
-                selectedPlan: 'Publicación Integral en Redes Sociales',
+            function g(id){ return document.getElementById(id); }
+
+            let state = {
+                user: null,
+                planSelected: false,
                 flyers: [
-                    {
-                        id: 1, 
-                        url: 'https://i.ibb.co/1JdPLjXM/20260128-021128.jpg'
-                    },
-                    {
-                        id: 2, 
-                        url: 'https://i.ibb.co/NbvhVYq/20260128-122719.jpg'
-                    },
-                    {
-                        id: 3, 
-                        url: '#'
-                    },
-                    {
-                        id: 4, 
-                        url: '#'
-                    }
+                    { url:'https://i.ibb.co/1JdPLjXM/20260128-021128.jpg' },
+                    { url:'https://i.ibb.co/NbvhVYq/20260128-122719.jpg' },
+                    { url:'https://i.ibb.co/9HpFkMq7/image-1769807257258.jpg' },
+                    { url:'https://i.ibb.co/FLW1s4Y8/image-1770738205218.jpg' },
+                    { url:'https://i.ibb.co/CK2wtGHd/image-1770834657256.jpg' },
+                    { url:'https://i.ibb.co/5gF8Ps57/IMG-20260127-WA0039.jpg' },
+                    { url:'https://i.ibb.co/wNT0Scps/IMG-20260127-WA0038.jpg' },
                 ],
-                toastTimeout: null,
-                carousel: {
-                    currentIndex: 0,
-                    interval: null,
-                    intervalTime: 4000,
-                    isPaused: false
-                },
-                pwa: {
-                    deferredPrompt: null,
-                    isInstalled: false
-                }
+                carouselIndex: 0,
+                pwaPrompt: null
             };
-            
-            const Utils = {
-                showToast(message, duration = 3000) {
-                    if (STATE.toastTimeout) {
-                        clearTimeout(STATE.toastTimeout);
-                    }
-                    
-                    DOM.toast.textContent = message;
-                    DOM.toast.classList.add('show');
-                    
-                    STATE.toastTimeout = setTimeout(() => {
-                        DOM.toast.classList.remove('show');
-                    }, duration);
-                },
-                
-                validatePhone(phone) {
-                    const phoneRegex = /^[\d\s\+\-\(\)]+$/;
-                    return phoneRegex.test(phone) && phone.trim().length >= 8;
-                },
-                
-                debounce(func, wait) {
-                    let timeout;
-                    return function executedFunction(...args) {
-                        const later = () => {
-                            clearTimeout(timeout);
-                            func(...args);
-                        };
-                        clearTimeout(timeout);
-                        timeout = setTimeout(later, wait);
-                    };
-                },
-                
-                formatPhone(phone) {
-                    return phone.replace(/\D/g, '');
-                },
-                
-                redirectToWebsite() {
-                    window.location.href = 'https://yotepublico.github.io/website/';
-                }
+
+            const STORE = {
+                key: 'yotepublico_v2',
+                save(data){ localStorage.setItem(this.key, JSON.stringify(data)); },
+                load(){ try { return JSON.parse(localStorage.getItem(this.key)); } catch { return null; } },
+                clear(){ localStorage.removeItem(this.key); }
             };
-            
-            const Storage = {
-                KEY: 'yotepublico_data',
-                
-                save(data) {
-                    try {
-                        localStorage.setItem(this.KEY, JSON.stringify(data));
-                        return true;
-                    } catch (e) {
-                        return false;
-                    }
-                },
-                
-                load() {
-                    try {
-                        const data = localStorage.getItem(this.KEY);
-                        return data ? JSON.parse(data) : null;
-                    } catch (e) {
-                        return null;
-                    }
-                },
-                
-                clear() {
-                    try {
-                        localStorage.removeItem(this.KEY);
-                        return true;
-                    } catch (e) {
-                        return false;
-                    }
+
+            function showToast(msg, dur=2500){
+                D.toast.textContent = msg;
+                D.toast.classList.remove('hidden');
+                setTimeout(() => D.toast.classList.add('hidden'), dur);
+            }
+
+            function validPhone(p){ return /^[\d\s\+\-\(\)]{8,}$/.test(p.trim()); }
+
+            function updateUserInfo(){
+                if(state.user){
+                    D.userInfo.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>${state.user.businessName}</span>`;
                 }
-            };
-            
-            const Carousel = {
-                init() {
-                    this.render();
-                    this.startAutoSlide();
-                    this.bindEvents();
-                },
-                
-                render() {
-                    DOM.carouselTrack.innerHTML = '';
-                    DOM.carouselDots.innerHTML = '';
-                    
-                    STATE.flyers.forEach((flyer, index) => {
-                        const slide = document.createElement('div');
-                        slide.className = 'carousel-slide';
-                        slide.innerHTML = `
-                            <img src="${flyer.url}" 
-                                 alt="Flyer ${index + 1}" 
-                                 class="carousel-image"
-                                 loading="lazy"
-                                 onerror="this.src='data:image/svg+xml;charset=UTF-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 500\"><rect width=\"800\" height=\"500\" fill=\"%234f46e5\"/><text x=\"400\" y=\"250\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"%23ffffff\">Flyer ${index + 1}</text></svg>'">
-                        `;
-                        DOM.carouselTrack.appendChild(slide);
-                        
-                        const dot = document.createElement('button');
-                        dot.className = `carousel-dot ${index === STATE.carousel.currentIndex ? 'active' : ''}`;
-                        dot.setAttribute('aria-label', `Ir al slide ${index + 1}`);
-                        dot.dataset.index = index;
-                        DOM.carouselDots.appendChild(dot);
-                    });
-                    
-                    this.updatePosition();
-                },
-                
-                updatePosition() {
-                    const translateX = -STATE.carousel.currentIndex * 100;
-                    DOM.carouselTrack.style.transform = `translateX(${translateX}%)`;
-                    
-                    const dots = DOM.carouselDots.querySelectorAll('.carousel-dot');
-                    dots.forEach((dot, index) => {
-                        dot.classList.toggle('active', index === STATE.carousel.currentIndex);
-                    });
-                },
-                
-                next() {
-                    STATE.carousel.currentIndex = (STATE.carousel.currentIndex + 1) % STATE.flyers.length;
-                    this.updatePosition();
-                },
-                
-                prev() {
-                    STATE.carousel.currentIndex = STATE.carousel.currentIndex === 0 
-                        ? STATE.flyers.length - 1 
-                        : STATE.carousel.currentIndex - 1;
-                    this.updatePosition();
-                },
-                
-                goTo(index) {
-                    if (index >= 0 && index < STATE.flyers.length) {
-                        STATE.carousel.currentIndex = index;
-                        this.updatePosition();
-                    }
-                },
-                
-                startAutoSlide() {
-                    this.stopAutoSlide();
-                    STATE.carousel.interval = setInterval(() => {
-                        if (!STATE.carousel.isPaused) {
-                            this.next();
-                        }
-                    }, STATE.carousel.intervalTime);
-                },
-                
-                stopAutoSlide() {
-                    if (STATE.carousel.interval) {
-                        clearInterval(STATE.carousel.interval);
-                    }
-                },
-                
-                pause() {
-                    STATE.carousel.isPaused = true;
-                },
-                
-                resume() {
-                    STATE.carousel.isPaused = false;
-                },
-                
-                bindEvents() {
-                    DOM.carouselNext.addEventListener('click', () => {
-                        this.next();
-                        this.pause();
-                        setTimeout(() => this.resume(), 3000);
-                    });
-                    
-                    DOM.carouselPrev.addEventListener('click', () => {
-                        this.prev();
-                        this.pause();
-                        setTimeout(() => this.resume(), 3000);
-                    });
-                    
-                    DOM.carouselDots.addEventListener('click', (e) => {
-                        if (e.target.classList.contains('carousel-dot')) {
-                            const index = parseInt(e.target.dataset.index);
-                            this.goTo(index);
-                            this.pause();
-                            setTimeout(() => this.resume(), 3000);
-                        }
-                    });
-                    
-                    DOM.carouselContainer.addEventListener('mouseenter', () => this.pause());
-                    DOM.carouselContainer.addEventListener('mouseleave', () => this.resume());
-                    
-                    DOM.carouselContainer.addEventListener('touchstart', () => this.pause());
-                    DOM.carouselContainer.addEventListener('touchend', () => {
-                        setTimeout(() => this.resume(), 3000);
-                    });
+            }
+
+            function renderCarousel(){
+                D.carouselTrack.innerHTML = '';
+                D.carouselDots.innerHTML = '';
+                state.flyers.forEach((f,i)=>{
+                    let slide = document.createElement('div');
+                    slide.className = 'carousel-slide';
+                    let img = document.createElement('img');
+                    img.className = 'carousel-image';
+                    img.src = f.url;
+                    img.alt = `flyer ${i+1}`;
+                    img.loading = 'lazy';
+                    img.onerror = ()=> img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Crect width='800' height='500' fill='%234f46e5'/%3E%3Ctext x='400' y='250' font-family='sans-serif' font-size='20' text-anchor='middle' fill='%23ffffff'%3EFlyer "+(i+1)+"%3C/text%3E%3C/svg%3E";
+                    slide.appendChild(img);
+                    D.carouselTrack.appendChild(slide);
+                    let dot = document.createElement('button');
+                    dot.className = `carousel-dot ${i===state.carouselIndex?'active':''}`;
+                    dot.dataset.index = i;
+                    dot.setAttribute('aria-label', `ir a flyer ${i+1}`);
+                    D.carouselDots.appendChild(dot);
+                });
+                updateCarousel();
+            }
+
+            function updateCarousel(){
+                D.carouselTrack.style.transform = `translateX(-${state.carouselIndex*100}%)`;
+                Array.from(D.carouselDots.children).forEach((dot,i)=>dot.classList.toggle('active', i===state.carouselIndex));
+            }
+
+            function nextSlide(){ state.carouselIndex = (state.carouselIndex+1) % state.flyers.length; updateCarousel(); }
+            function prevSlide(){ state.carouselIndex = (state.carouselIndex-1+state.flyers.length) % state.flyers.length; updateCarousel(); }
+            function goToSlide(i){ if(i>=0 && i<state.flyers.length){ state.carouselIndex=i; updateCarousel(); } }
+
+            function handleLogin(e){
+                e.preventDefault();
+                let name = g('businessName').value.trim(), desc = g('businessDescription').value.trim(),
+                    links = g('businessLinks').value.trim(), phone = g('businessPhone').value.trim();
+                if(!name || !desc || !phone) return showToast('Campos requeridos incompletos');
+                if(!validPhone(phone)) return showToast('Teléfono inválido');
+                state.user = { businessName:name, businessDescription:desc, businessLinks:links, businessPhone:phone };
+                STORE.save(state.user);
+                localStorage.removeItem('yotepublico_temp');
+                D.loginScreen.classList.add('hidden');
+                D.mainContent.classList.remove('hidden');
+                updateUserInfo();
+                renderCarousel();
+                showToast(`Bienvenido ${name}`);
+            }
+
+            function handleLogout(){
+                if(!confirm('¿Cerrar sesión?')) return;
+                STORE.clear(); state.user = null; state.planSelected = false;
+                D.mainContent.classList.add('hidden'); D.loginScreen.classList.remove('hidden');
+                g('loginForm').reset();
+            }
+
+            function handleSelectPlan(){
+                if(state.planSelected){
+                    showToast('Plan ya seleccionado');
+                    return;
                 }
-            };
-            
-            const PWA = {
-                init() {
-                    if (window.matchMedia('(display-mode: standalone)').matches || 
-                        window.navigator.standalone === true) {
-                        STATE.pwa.isInstalled = true;
-                    }
-                    
-                    window.addEventListener('beforeinstallprompt', (e) => {
-                        e.preventDefault();
-                        STATE.pwa.deferredPrompt = e;
-                        
-                        DOM.installAppBtn.classList.remove('hidden');
-                        
-                        if (!STATE.pwa.isInstalled) {
-                            setTimeout(() => {
-                                this.showInstallPrompt();
-                            }, 5000);
-                        }
-                    });
-                    
-                    window.addEventListener('appinstalled', () => {
-                        STATE.pwa.isInstalled = true;
-                        this.hideInstallPrompt();
-                        Utils.showToast('¡Aplicación instalada con éxito!');
-                        
-                        setTimeout(() => {
-                            Utils.redirectToWebsite();
-                        }, 2000);
-                    });
-                    
-                    this.bindEvents();
-                },
-                
-                showInstallPrompt() {
-                    if (STATE.pwa.deferredPrompt && !STATE.pwa.isInstalled) {
-                        DOM.installPrompt.classList.add('show');
-                    }
-                },
-                
-                hideInstallPrompt() {
-                    DOM.installPrompt.classList.remove('show');
-                },
-                
-                async installApp() {
-                    if (!STATE.pwa.deferredPrompt) {
-                        Utils.showToast('La aplicación ya está instalada o no está disponible para instalación.');
-                        return;
-                    }
-                    
-                    try {
-                        STATE.pwa.deferredPrompt.prompt();
-                        const { outcome } = await STATE.pwa.deferredPrompt.userChoice;
-                        
-                        if (outcome === 'accepted') {
-                            STATE.pwa.isInstalled = true;
-                            this.hideInstallPrompt();
-                        } else {
-                            Utils.showToast('Instalación cancelada. Puedes instalarla más tarde.');
-                        }
-                        
-                        STATE.pwa.deferredPrompt = null;
-                    } catch (error) {
-                        Utils.showToast('Error al instalar la aplicación.');
-                    }
-                },
-                
-                bindEvents() {
-                    DOM.installAppBtn.addEventListener('click', () => {
-                        this.installApp();
-                    });
-                    
-                    DOM.installButton.addEventListener('click', () => {
-                        this.installApp();
-                    });
-                    
-                    DOM.laterButton.addEventListener('click', () => {
-                        this.hideInstallPrompt();
-                    });
-                    
-                    DOM.closeInstall.addEventListener('click', () => {
-                        this.hideInstallPrompt();
-                    });
-                }
-            };
-            
-            const UI = {
-                updateUserInfo() {
-                    if (STATE.userData) {
-                        DOM.userInfo.innerHTML = `
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                                <circle cx="12" cy="7" r="4"/>
-                            </svg>
-                            <span>${STATE.userData.businessName}</span>
-                        `;
-                    }
-                },
-                
-                prepareSMS() {
-                    if (!STATE.userData) return '';
-                    
-                    const links = STATE.userData.businessLinks 
-                        ? STATE.userData.businessLinks.split(',').map(l => l.trim()).filter(l => l)
-                        : [];
-                    
-                    let message = `*SOLICITUD DE SERVICIO - YoTePúblico/Agencia*\n\n`;
-                    message += `*NEGOCIO:* ${STATE.userData.businessName}\n`;
-                    message += `*TELÉFONO:* ${Utils.formatPhone(STATE.userData.businessPhone)}\n\n`;
-                    message += `*DESCRIPCIÓN:*\n${STATE.userData.businessDescription}\n\n`;
-                    
-                    if (links.length > 0) {
-                        message += `*ENLACES ACTUALES:*\n`;
-                        links.forEach((link, i) => {
-                            message += `${i + 1}. ${link}\n`;
-                        });
-                        message += `\n`;
-                    }
-                    
-                    message += `*PLAN SELECCIONADO:* ${STATE.selectedPlan}\n`;
-                    message += `*INVERSIÓN:* 400 CUP\n\n`;
-                    message += `*EJEMPLOS VISTOS:* ${STATE.flyers.length} flyers\n`;
-                    message += `*FECHA:* ${new Date().toLocaleDateString('es-CU')}\n\n`;
-                    message += `_Esta solicitud fue generada desde la plataforma digital de YoTePúblico/Agencia_`;
-                    
-                    return encodeURIComponent(message);
-                }
-            };
-            
-            const Events = {
-                init() {
-                    DOM.loginForm.addEventListener('submit', this.handleLogin.bind(this));
-                    DOM.logoutBtn.addEventListener('click', this.handleLogout.bind(this));
-                    DOM.selectPlanBtn.addEventListener('click', this.handleSelectPlan.bind(this));
-                    DOM.sendSmsBtn.addEventListener('click', this.handleSendSMS.bind(this));
-                },
-                
-                handleLogin(e) {
+                state.planSelected = true;
+                D.selectPlanBtn.textContent = '✓ Plan seleccionado';
+                D.selectPlanBtn.disabled = true;
+                showToast('Plan registrado');
+            }
+
+            function handleSendSMS(){
+                if(!state.user) return showToast('Complete sus datos primero');
+                let u = state.user;
+                let links = u.businessLinks ? u.businessLinks.split(',').map(l=>l.trim()).filter(l=>l) : [];
+                let msg = `*SOLICITUD YoTePúblico*\nNegocio: ${u.businessName}\nTel: ${u.businessPhone}\nDesc: ${u.businessDescription}`;
+                if(links.length) msg += `\nEnlaces: ${links.join(', ')}`;
+                msg += `\nPlan: Publicación integral (400 CUP)`;
+                window.open(`sms:+5350728969?body=${encodeURIComponent(msg)}`, '_blank');
+                showToast('Mensaje listo en app SMS');
+            }
+
+            function initPWA(){
+                window.addEventListener('beforeinstallprompt', e=>{
                     e.preventDefault();
-                    
-                    const businessName = document.getElementById('businessName').value.trim();
-                    const businessDescription = document.getElementById('businessDescription').value.trim();
-                    const businessLinks = document.getElementById('businessLinks').value.trim();
-                    const businessPhone = document.getElementById('businessPhone').value.trim();
-                    
-                    if (!businessName || !businessDescription || !businessPhone) {
-                        Utils.showToast('Complete todos los campos requeridos');
-                        return;
-                    }
-                    
-                    if (!Utils.validatePhone(businessPhone)) {
-                        Utils.showToast('Ingrese un número de teléfono válido');
-                        return;
-                    }
-                    
-                    STATE.userData = {
-                        businessName,
-                        businessDescription,
-                        businessLinks,
-                        businessPhone,
-                        registeredAt: new Date().toISOString()
-                    };
-                    
-                    if (Storage.save(STATE.userData)) {
-                        DOM.loginScreen.classList.add('hidden');
-                        DOM.mainContent.classList.remove('hidden');
-                        UI.updateUserInfo();
-                        Carousel.init();
-                        Utils.showToast('¡Bienvenido a YoTePúblico/Agencia!');
-                    } else {
-                        Utils.showToast('Error al guardar los datos. Intente nuevamente.');
-                    }
-                },
-                
-                handleLogout() {
-                    if (confirm('¿Está seguro de que desea cerrar sesión?')) {
-                        Storage.clear();
-                        STATE.userData = null;
-                        Carousel.stopAutoSlide();
-                        DOM.mainContent.classList.add('hidden');
-                        DOM.loginScreen.classList.remove('hidden');
-                        DOM.loginForm.reset();
-                        Utils.showToast('Sesión cerrada correctamente');
-                    }
-                },
-                
-                handleSelectPlan() {
-                    Utils.showToast(`Plan seleccionado: "${STATE.selectedPlan}"`);
-                    
-                    DOM.selectPlanBtn.innerHTML = '<span class="loading"></span> Procesando...';
-                    DOM.selectPlanBtn.disabled = true;
-                    
-                    setTimeout(() => {
-                        DOM.selectPlanBtn.innerHTML = '✓ Plan Seleccionado';
-                        setTimeout(() => {
-                            DOM.selectPlanBtn.innerHTML = 'Seleccionar este Plan';
-                            DOM.selectPlanBtn.disabled = false;
-                        }, 2000);
-                    }, 1000);
-                },
-                
-                handleSendSMS() {
-                    if (!STATE.userData) {
-                        Utils.showToast('Primero complete sus datos de negocio');
-                        return;
-                    }
-                    
-                    const message = UI.prepareSMS();
-                    const phoneNumber = "+5350728969";
-                    
-                    const smsUrl = `sms:${phoneNumber}?body=${message}`;
-                    
-                    DOM.sendSmsBtn.innerHTML = '<span class="loading"></span> Preparando...';
-                    DOM.sendSmsBtn.disabled = true;
-                    
-                    setTimeout(() => {
-                        window.open(smsUrl, '_blank');
-                        DOM.sendSmsBtn.innerHTML = '📱 Enviar Solicitud por SMS';
-                        DOM.sendSmsBtn.disabled = false;
-                        Utils.showToast('Mensaje preparado. Revise su aplicación de mensajes.');
-                    }, 500);
+                    state.pwaPrompt = e;
+                    D.installAppBtn.classList.remove('hidden');
+                });
+                window.addEventListener('appinstalled', ()=>{
+                    state.pwaPrompt = null;
+                    D.installPrompt.classList.add('hidden');
+                    showToast('App instalada');
+                });
+                function showInstall(){ if(state.pwaPrompt) D.installPrompt.classList.remove('hidden'); }
+                D.installAppBtn.addEventListener('click', ()=>{
+                    if(state.pwaPrompt) state.pwaPrompt.prompt();
+                    else showToast('No disponible o ya instalada');
+                });
+                D.installButton.addEventListener('click', ()=>{
+                    if(state.pwaPrompt) state.pwaPrompt.prompt();
+                });
+                D.laterButton.addEventListener('click', ()=> D.installPrompt.classList.add('hidden'));
+                D.closeInstall.addEventListener('click', ()=> D.installPrompt.classList.add('hidden'));
+                setTimeout(showInstall, 3000);
+            }
+
+            function initAutoSave(){
+                ['businessName','businessDescription','businessLinks','businessPhone'].forEach(id=>{
+                    let el = g(id);
+                    if(el) el.addEventListener('input', ()=>{
+                        let data = {};
+                        ['businessName','businessDescription','businessLinks','businessPhone'].forEach(f=> data[f] = g(f)?.value || '');
+                        localStorage.setItem('yotepublico_temp', JSON.stringify(data));
+                    });
+                });
+                let draft = localStorage.getItem('yotepublico_temp');
+                if(draft){
+                    try{
+                        let data = JSON.parse(draft);
+                        ['businessName','businessDescription','businessLinks','businessPhone'].forEach(f=>{
+                            if(g(f) && data[f]) g(f).value = data[f];
+                        });
+                    }catch(e){}
                 }
-            };
-            
-            const App = {
-                init() {
-                    this.loadUserData();
-                    Events.init();
-                    PWA.init();
-                    this.registerServiceWorker();
-                },
-                
-                loadUserData() {
-                    const savedData = Storage.load();
-                    if (savedData) {
-                        STATE.userData = savedData;
-                        DOM.loginScreen.classList.add('hidden');
-                        DOM.mainContent.classList.remove('hidden');
-                        UI.updateUserInfo();
-                        Carousel.init();
-                    }
-                },
-                
-                registerServiceWorker() {
-                    if ('serviceWorker' in navigator) {
-                        navigator.serviceWorker.register('/service-worker.js');
-                    }
+            }
+
+            function loadSession(){
+                let saved = STORE.load();
+                if(saved){
+                    state.user = saved;
+                    D.loginScreen.classList.add('hidden');
+                    D.mainContent.classList.remove('hidden');
+                    updateUserInfo();
+                    renderCarousel();
                 }
-            };
-            
-            window.addEventListener('DOMContentLoaded', () => App.init());
+            }
+
+            D.loginForm.addEventListener('submit', handleLogin);
+            D.logoutBtn.addEventListener('click', handleLogout);
+            D.selectPlanBtn.addEventListener('click', handleSelectPlan);
+            D.sendSmsBtn.addEventListener('click', handleSendSMS);
+            D.carouselNext.addEventListener('click', nextSlide);
+            D.carouselPrev.addEventListener('click', prevSlide);
+            D.carouselDots.addEventListener('click', e=>{
+                if(e.target.classList.contains('carousel-dot')) goToSlide(parseInt(e.target.dataset.index));
+            });
+
+            initAutoSave();
+            loadSession();
+            initPWA();
         })();
     </script>
 </body>
