@@ -5,7 +5,7 @@ import re
 
 # Configuración de logging
 logging.basicConfig(
-    format=\'%(asctime)s - %(name)s - %(levelname)s - %(message)s\',
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO
 )
 logger = logging.getLogger(__name__)
@@ -96,7 +96,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     logo_path = "/home/ubuntu/yotepublico_website/assets/images/logo.jpg"
     
     welcome_text = (
-        rf"¡Hola {user.mention_html()}! 🚀\n\n"
+        f"¡Hola {user.mention_html()}! 🚀\n\n"
         "Soy el bot oficial de **YOTEPUBLICO**, tu aliado estratégico para potenciar tu marca en el ecosistema digital.\n\n"
         "Estamos aquí para ofrecerte soluciones de publicidad y marketing digital que impulsarán tu negocio. Explora nuestros servicios, descubre nuestras ventajas y contáctanos fácilmente.\n\n"
         "¿En qué puedo ayudarte hoy?"
@@ -192,13 +192,13 @@ async def service_details(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     service = SERVICES.get(service_id)
     
     if service:
-        details_text = f"**✨ {service["title"]} ✨**\n\n"
-        details_text += f"*Precio:* {service["price"]}\n\n"
-        details_text += f"*Descripción:* {service["description"]}\n\n"
+        details_text = f"**✨ {service['title']} ✨**\n\n"
+        details_text += f"*Precio:* {service['price']}\n\n"
+        details_text += f"*Descripción:* {service['description']}\n\n"
         details_text += "**Características Clave:**\n"
-        for feature in service["features"]:
+        for feature in service['features']:
             details_text += f"- {feature}\n"
-        details_text += f"\n**Detalles Técnicos y Proceso:**\n{service["technical_details"]}\n\n"
+        details_text += f"\n**Detalles Técnicos y Proceso:**\n{service['technical_details']}\n\n"
         details_text += "¿Listo para llevar tu marca al siguiente nivel?"
         
         keyboard = [
@@ -220,7 +220,7 @@ async def show_features(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     features_text = "**✨ ¿Por qué elegir a YOTEPUBLICO?**\n\n"
     features_text += "Somos tu socio ideal para el crecimiento digital por estas razones clave:\n\n"
     for feature in FEATURES:
-        features_text += f"{feature["icon"]} **{feature["title"]}:** {feature["description"]}\n\n"
+        features_text += f"{feature['icon']} **{feature['title']}:** {feature['description']}\n\n"
     features_text += "Nuestra experiencia y compromiso garantizan resultados tangibles para tu negocio."
 
     keyboard = [
@@ -241,8 +241,8 @@ async def show_faq(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
     faq_text = "**❓ Preguntas Frecuentes (FAQ):**\n\n"
     for i, qa in enumerate(FAQ):
-        faq_text += f"*{i+1}. {qa["question"]}*\n"
-        faq_text += f"{qa["answer"]}\n\n"
+        faq_text += f"*{i+1}. {qa['question']}*\n"
+        faq_text += f"{qa['answer']}\n\n"
     faq_text += "Si tienes más preguntas, no dudes en contactarnos a través de la opción /contact."
 
     keyboard = [
@@ -382,8 +382,6 @@ async def confirm_request(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         contact_info = context.user_data.get("contact_info", "No proporcionado")
         user_requirements = context.user_data.get("requirements", "No especificados")
 
-        # Aquí se podría integrar con un sistema de CRM, enviar un correo, guardar en DB, etc.
-        # Por ahora, solo se enviará un mensaje de confirmación al usuario y se logueará.
         final_confirmation_message = (
             f"¡**Solicitud Recibida con Éxito!** 🎉\n\n"
             f"Agradecemos tu interés en **{service_title}**.\n"
@@ -444,7 +442,7 @@ def main() -> None:
         states={
             SERVICE_SELECTION: [
                 CallbackQueryHandler(select_service_for_request, pattern=r"^select_request_service_.*"),
-                MessageHandler(filters.TEXT & ~filters.COMMAND, request_service_entry), # Permite escribir el nombre del servicio si no se seleccionó con botón
+                MessageHandler(filters.TEXT & ~filters.COMMAND, request_service_entry),
             ],
             CONTACT_INFO: [MessageHandler(filters.TEXT & ~filters.COMMAND, get_contact_info)],
             REQUIREMENTS: [MessageHandler(filters.TEXT & ~filters.COMMAND, get_requirements)],
@@ -453,9 +451,9 @@ def main() -> None:
         fallbacks=[
             CommandHandler("cancel", cancel),
             CallbackQueryHandler(cancel, pattern=r"^cancel_request$"),
-            CommandHandler("start", start), # Permite reiniciar desde /start
-            CommandHandler("help", help_command), # Permite pedir ayuda
-            CommandHandler("menu", main_menu), # Permite ir al menú principal
+            CommandHandler("start", start),
+            CommandHandler("help", help_command),
+            CommandHandler("menu", main_menu),
         ],
     )
     application.add_handler(conv_handler)
