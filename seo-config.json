@@ -1,0 +1,109 @@
+{
+  "site": {
+    "name": "AGENCIA YOTEPUBLICO",
+    "description": "Agencia profesional de publicidad y marketing digital en Cuba. Publicaciones en redes sociales, diseño de flyers, gestión de marca y campañas digitales.",
+    "url": "https://yotepublico.github.io/website/",
+    "language": "es",
+    "locale": "es_ES",
+    "country": "CU"
+  },
+  "contact": {
+    "phone": "+5350728969",
+    "whatsapp": "https://wa.me/5350728969",
+    "telegram": "https://t.me/yotepublico",
+    "email": "info@yotepublico.com"
+  },
+  "social": {
+    "facebook": "https://facebook.com/yotepublico",
+    "instagram": "https://instagram.com/yotepublico",
+    "tiktok": "https://tiktok.com/@yotepublico",
+    "linkedin": "https://linkedin.com/company/yotepublico",
+    "twitter": "https://twitter.com/yotepublico"
+  },
+  "keywords": {
+    "primary": ["agencia publicidad", "marketing digital", "redes sociales Cuba"],
+    "secondary": ["publicaciones", "flyers", "community manager", "gestión de marca", "campañas digitales"],
+    "long_tail": [
+      "agencia de publicidad en Cuba",
+      "servicios de marketing digital Cuba",
+      "publicaciones en redes sociales profesionales",
+      "diseño de flyers para negocios",
+      "gestión de redes sociales Cuba"
+    ]
+  },
+  "schema": {
+    "organization": {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "AGENCIA YOTEPUBLICO",
+      "description": "Agencia profesional de publicidad y marketing digital",
+      "url": "https://yotepublico.github.io/website/",
+      "logo": "https://yotepublico.github.io/website/favicon.jpg",
+      "image": "https://yotepublico.github.io/website/favicon.jpg",
+      "priceRange": "150-400 CUP",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cuba",
+        "addressCountry": "CU"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Cuba"
+      },
+      "sameAs": [
+        "https://t.me/yotepublico",
+        "https://wa.me/5350728969"
+      ]
+    },
+    "services": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Publicación Integral",
+        "description": "Publicación manual en 6 redes sociales + diseño de flyer profesional",
+        "offers": {
+          "@type": "Offer",
+          "price": "400",
+          "priceCurrency": "CUP"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Plan WhatsApp Pro",
+        "description": "Publicación especializada en WhatsApp con máximo alcance",
+        "offers": {
+          "@type": "Offer",
+          "price": "150",
+          "priceCurrency": "CUP"
+        }
+      }
+    ]
+  },
+  "performance": {
+    "target_core_web_vitals": {
+      "LCP": "< 2.5s",
+      "FID": "< 100ms",
+      "CLS": "< 0.1"
+    },
+    "optimization_tips": [
+      "Usar imágenes optimizadas y responsive",
+      "Implementar lazy loading para imágenes",
+      "Minificar CSS y JavaScript",
+      "Usar CDN para assets estáticos",
+      "Implementar caching del navegador",
+      "Usar compresión GZIP"
+    ]
+  },
+  "accessibility": {
+    "wcag_level": "AA",
+    "features": [
+      "Alto contraste disponible",
+      "Navegación por teclado",
+      "Textos alternativos en imágenes",
+      "Estructura semántica HTML",
+      "Etiquetas ARIA apropiadas",
+      "Tamaño de fuente ajustable"
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "name": "AGENCIA YOTEPUBLICO",
+  "short_name": "YOTEPUBLICO",
+  "description": "Agencia profesional de publicidad y marketing digital. Publicaciones en redes sociales, diseño de flyers y gestión de marca.",
+  "start_url": "/website/",
+  "scope": "/website/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#E63946",
+  "background_color": "#FFFFFF",
+  "categories": ["business", "marketing"],
+  "screenshots": [
+    {
+      "src": "/favicon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/favicon.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ver Servicios",
+      "short_name": "Servicios",
+      "description": "Consulta nuestros planes de publicidad",
+      "url": "/website/#servicios",
+      "icons": [
+        {
+          "src": "/favicon.jpg",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Contactar",
+      "short_name": "Contacto",
+      "description": "Ponte en contacto con nosotros",
+      "url": "/website/#contacto",
+      "icons": [
+        {
+          "src": "/favicon.jpg",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

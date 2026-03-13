@@ -1,0 +1,26 @@
+# AGENCIA YOTEPUBLICO - Robots.txt
+# Configuración de rastreo para motores de búsqueda
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /api/
+
+# Crawl delay
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://yotepublico.github.io/website/sitemap.xml
+
+# Específico para Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Específico para Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
