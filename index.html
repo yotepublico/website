@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGENCIA PREMIUM | YOTEPUBLICO</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23D4AF37'/%3E%3Cstop offset='100%25' style='stop-color:%23FFB347'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23g)'/%3E%3Ctext x='50' y='65' font-family='Arial Black' font-size='50' fill='%23111111' text-anchor='middle'%3EY%3C/text%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="appbar">
+    <div class="logo">YOTEPUBLICO<span class="logo-star">✦</span></div>
+    <div class="nav-menu" id="navMenu">
+      <div class="nav-item active" data-section="gallery">Portafolio</div>
+      <div class="nav-item" data-section="plans">Planes</div>
+      <div class="nav-item" data-section="contact">Contacto</div>
+    </div>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú">☰</button>
+  </nav>
+
+  <main class="main">
+    <section id="gallery" class="section gallery active">
+      <div class="banner">
+        <div class="banner-content">
+          <h1>YOTEPUBLICO</h1>
+          <div class="premium-tag">PREMIUM PLUS</div>
+        </div>
+      </div>
+      <div class="carousel-container">
+        <div class="carousel" id="carousel"></div>
+        <div class="controls">
+          <button class="btn" id="prevBtn">❮</button>
+          <div class="progress"><div class="progress-bar" id="prog"></div></div>
+          <button class="btn" id="nextBtn">❯</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="plans" class="section plans">
+      <div class="section-title">
+        <h2>Soluciones Premium</h2>
+        <p>Especialistas en WhatsApp & Facebook</p>
+      </div>
+      <div class="plans-grid">
+        <div class="plan">
+          <div class="plan-icon">💬</div>
+          <h3>WhatsApp Business</h3>
+          <div class="price">$249<span>/mes</span></div>
+          <ul class="features">
+            <li><span class="check">✓</span> API oficial verificada</li>
+            <li><span class="check">✓</span> Mensajes masivos ilimitados</li>
+            <li><span class="check">✓</span> Catálogo interactivo</li>
+            <li><span class="check">✓</span> Chatbot inteligente 24/7</li>
+            <li><span class="check">✓</span> Segmentación por etiquetas</li>
+            <li><span class="check">✓</span> Reportes de conversión</li>
+            <li><span class="check">✓</span> Soporte prioritario</li>
+          </ul>
+          <button class="plan-btn" data-plan="WhatsApp Business">Seleccionar plan</button>
+        </div>
+        <div class="plan">
+          <div class="plan-icon">📘</div>
+          <h3>Facebook Ads Pro</h3>
+          <div class="price">$399<span>/mes</span></div>
+          <ul class="features">
+            <li><span class="check">✓</span> Gestión de Fan Page</li>
+            <li><span class="check">✓</span> 12 publicaciones/mes optimizadas</li>
+            <li><span class="check">✓</span> Campañas de Ads segmentadas</li>
+            <li><span class="check">✓</span> Públicos personalizados + LAL</li>
+            <li><span class="check">✓</span> Respuesta a comentarios (8h)</li>
+            <li><span class="check">✓</span> Informe semanal de ROI</li>
+            <li><span class="check">✓</span> Estrategia de contenido</li>
+          </ul>
+          <button class="plan-btn" data-plan="Facebook Ads Pro">Seleccionar plan</button>
+        </div>
+      </div>
+      <p class="plans-footnote">✦ Planes sin permanencia · Soporte 24/7 premium ✦</p>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-title">
+        <h2>Publica tu Anuncio</h2>
+        <p>Envíanos tu brief y te asesoramos</p>
+      </div>
+      <div class="form">
+        <form id="adForm">
+          <div class="form-group">
+            <label>Nombre completo</label>
+            <input type="text" id="name" required placeholder="Ej. María González">
+          </div>
+          <div class="form-group">
+            <label>Email corporativo</label>
+            <input type="email" id="email" required placeholder="maria@empresa.com">
+          </div>
+          <div class="form-group">
+            <label>Empresa / Marca</label>
+            <input type="text" id="company" placeholder="Tu empresa">
+          </div>
+          <div class="form-group">
+            <label>Describe tu objetivo</label>
+            <textarea id="message" required placeholder="Cuéntanos qué necesitas: campaña, branding, leads..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Adjuntar brief / referencias</label>
+            <div class="file-input">
+              <input type="file" id="files" multiple accept="image/*,video/*,.pdf,.doc,.docx">
+              <div class="file-label" id="fileLabel">📎 Arrastra archivos o haz clic</div>
+            </div>
+          </div>
+          <button type="submit" class="submit">Enviar solicitud →</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="portafolio.js"></script>
+  <script src="planes.js"></script>
+  <script src="contactos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
