@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AGENCIA | YOTEPUBLICO</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23D4AF37'/%3E%3Cstop offset='100%25' style='stop-color:%23FFB347'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23g)'/%3E%3Ctext x='50' y='65' font-family='Arial Black' font-size='50' fill='%23111111' text-anchor='middle'%3EY%3C/text%3E%3C/svg%3E">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}:root{--primary:#0f172a;--primary-light:#1e293b;--accent:#d946ef;--accent-soft:#f0abfc;--accent-grad:linear-gradient(135deg,#d946ef 0%,#a855f7 50%,#6366f1 100%);--surface:#ffffff;--bg:#f1f5f9;--text:#0b1120;--text-muted:#475569;--border-light:rgba(0,0,0,0.05);--shadow-sm:0 10px 25px -5px rgba(0,0,0,0.05),0 8px 10px -6px rgba(0,0,0,0.02);--shadow-md:0 20px 30px -10px rgba(0,0,0,0.08),0 8px 20px -8px rgba(0,0,0,0.04);--shadow-lg:0 30px 40px -15px rgba(0,0,0,0.12);--radius-card:32px;--radius-element:20px}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased}.appbar{position:fixed;top:0;left:0;right:0;height:70px;background:rgba(255,255,255,0.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:space-between;padding:0 5%;z-index:1000;border-bottom:1px solid var(--border-light);box-shadow:0 4px 12px rgba(0,0,0,0.02)}.logo{font-family:'Outfit',sans-serif;font-size:1.9rem;font-weight:700;letter-spacing:-0.02em;background:var(--accent-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;cursor:pointer;transition:opacity 0.2s}.logo:hover{opacity:0.85}.nav-menu{display:flex;gap:6px}.nav-item{cursor:pointer;padding:10px 22px;border-radius:40px;font-size:0.9rem;font-weight:600;text-transform:uppercase;letter-spacing:0.4px;color:var(--text-muted);background:transparent;transition:all 0.2s;border:none}.nav-item:hover{background:rgba(217,70,239,0.08);color:var(--accent)}.nav-item.active{background:var(--primary);color:white;box-shadow:0 6px 12px rgba(15,23,42,0.15)}.mobile-toggle{display:none;background:transparent;border:1.5px solid var(--primary-light);color:var(--primary);font-size:1.7rem;width:46px;height:46px;border-radius:16px;align-items:center;justify-content:center;cursor:pointer;transition:0.2s}.mobile-toggle:hover{background:var(--primary);color:white}.main{margin-top:70px;min-height:calc(100vh - 70px)}.section{display:none;padding:30px 24px 50px;animation:fade 0.35s ease-out}.section.active{display:block}@keyframes fade{0%{opacity:0;transform:translateY(10px)}100%{opacity:1;transform:translateY(0)}}.hero-badge{display:inline-block;background:rgba(217,70,239,0.12);color:var(--accent);font-weight:600;font-size:0.9rem;padding:6px 18px;border-radius:40px;letter-spacing:0.5px;margin-bottom:16px;backdrop-filter:blur(4px);border:1px solid rgba(217,70,239,0.2)}h1{font-family:'Outfit',sans-serif;font-size:clamp(2.5rem,8vw,3.8rem);font-weight:700;line-height:1.2;letter-spacing:-0.02em;margin-bottom:8px;color:var(--primary)}.gallery .banner{text-align:center;margin-bottom:30px}.carousel-container{display:flex;flex-direction:column;align-items:center;gap:18px}.carousel{position:relative;width:100%;max-width:400px;aspect-ratio:9/16;margin:0 auto;perspective:1400px}.poster{position:absolute;width:100%;height:100%;border-radius:var(--radius-card);overflow:hidden;box-shadow:var(--shadow-lg);opacity:0;transition:all 0.6s cubic-bezier(0.2,0.9,0.3,1);transform:scale(0.8) translateZ(-150px);border:1px solid rgba(255,255,255,0.3);cursor:pointer}.poster.active{opacity:1;transform:scale(1) translateZ(0);z-index:10;box-shadow:var(--shadow-lg),0 0 0 2px var(--accent)}.poster.prev{opacity:0.55;transform:scale(0.85) translateX(-20%) translateZ(-150px) rotateY(10deg);z-index:5}.poster.next{opacity:0.55;transform:scale(0.85) translateX(20%) translateZ(-150px) rotateY(-10deg);z-index:5}.poster img{width:100%;height:100%;object-fit:cover;display:block}.poster-info{position:absolute;bottom:0;left:0;right:0;padding:35px 28px 24px;background:linear-gradient(to top,#0f172a 0%,transparent 100%);color:white}.poster-info h2{font-family:'Outfit',sans-serif;font-size:2rem;font-weight:600;margin-bottom:6px}.poster-info p{opacity:0.9;font-weight:400}.controls{display:flex;gap:20px;align-items:center;margin-top:20px}.btn{width:52px;height:52px;border-radius:30px;border:none;background:var(--surface);box-shadow:var(--shadow-sm);color:var(--primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.6rem;transition:all 0.2s;border:1px solid var(--border-light)}.btn:hover{background:var(--primary);color:white;box-shadow:var(--shadow-md);transform:scale(1.02)}.progress{width:200px;height:5px;background:#e2e8f0;border-radius:10px;overflow:hidden}.progress-bar{height:100%;background:var(--accent-grad);width:0%;transition:width 0.1s linear}.plans,.contact{max-width:1100px;margin:0 auto}.section-title{text-align:center;margin-bottom:45px}.section-title h2{font-family:'Outfit',sans-serif;font-size:clamp(2.2rem,6vw,3rem);font-weight:700;letter-spacing:-0.02em;color:var(--primary)}.section-title p{color:var(--text-muted);font-size:1.2rem;font-weight:400}.plans-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px}.plan{background:var(--surface);border-radius:var(--radius-card);padding:36px 32px;box-shadow:var(--shadow-md);border:1px solid var(--border-light);transition:transform 0.25s,box-shadow 0.3s}.plan:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg),0 0 0 2px var(--accent-soft)}.plan-icon{font-size:3.2rem;margin-bottom:20px}.plan h3{font-family:'Outfit',sans-serif;font-size:2rem;font-weight:600;margin-bottom:8px}.price{font-size:2.5rem;font-weight:800;margin-bottom:24px;color:var(--primary);display:flex;align-items:baseline;gap:6px}.price span{font-size:0.9rem;font-weight:500;color:var(--text-muted)}.features{list-style:none;margin-bottom:32px}.features li{padding:10px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px;color:var(--text)}.check{color:var(--accent);font-weight:bold;font-size:1.4rem}.plan-btn{width:100%;padding:16px;background:white;border:1.5px solid var(--primary-light);color:var(--primary);border-radius:50px;font-weight:700;font-size:1rem;cursor:pointer;transition:all 0.2s;text-transform:uppercase;letter-spacing:1.5px}.plan-btn:hover{background:var(--primary);color:white;border-color:var(--primary)}.plans-footnote{text-align:center;margin-top:40px;color:var(--text-muted);font-weight:500}.contact .form{background:var(--surface);border-radius:var(--radius-card);padding:40px 38px;box-shadow:var(--shadow-lg);border:1px solid var(--border-light)}.form-group{margin-bottom:26px}.form-group label{display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem;color:var(--primary);letter-spacing:0.3px}.form-group input,.form-group textarea{width:100%;padding:15px 18px;background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:24px;font-size:1rem;transition:0.2s;font-family:'Inter',sans-serif;color:var(--primary)}.form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--accent);background:white;box-shadow:0 0 0 4px rgba(217,70,239,0.1)}.form-group textarea{min-height:130px;resize:vertical}.submit{width:100%;padding:18px;background:var(--primary);border:none;border-radius:50px;color:white;font-weight:700;font-size:1.1rem;cursor:pointer;transition:all 0.25s;text-transform:uppercase;letter-spacing:2px;box-shadow:var(--shadow-sm)}.submit:hover{background:var(--accent-grad);transform:translateY(-3px);box-shadow:var(--shadow-md)}@media (max-width:768px){.appbar{padding:0 20px;height:64px}.nav-menu{position:fixed;top:64px;left:0;right:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);flex-direction:column;align-items:stretch;padding:20px 20px;gap:8px;border-bottom:1px solid var(--border-light);display:none;box-shadow:var(--shadow-md)}.nav-menu.open{display:flex}.nav-item{text-align:center;padding:14px}.mobile-toggle{display:flex}.plans-grid{grid-template-columns:1fr}.carousel{max-width:340px}.poster-info h2{font-size:1.5rem}.contact .form{padding:30px 22px}}@media (min-width:1200px){.carousel{max-width:440px}}
+  </style>
 </head>
 <body>
   <nav class="appbar">
-    <div class="logo">YOTEPUBLICO<span class="logo-star">✦</span></div>
+    <div class="logo">INICIO</div>
     <div class="nav-menu" id="navMenu">
       <div class="nav-item active" data-section="gallery">Portafolio</div>
       <div class="nav-item" data-section="plans">Planes</div>
@@ -18,97 +20,103 @@
     </div>
     <button class="mobile-toggle" id="mobileToggle" aria-label="Menú">☰</button>
   </nav>
-
   <main class="main">
     <section id="gallery" class="section gallery active">
       <div class="banner">
-        <div class="banner-content">
-          <h1>Inicio</h1>
-          <div class="premium-tag">servicios de publicidad</div>
-        </div>
+        <span class="hero-badge">AGENCIA | YOTEPUBLICO</span>
+        <h1>Tu Marca,<br>En Todas Partes De Internet</h1>
       </div>
       <div class="carousel-container">
         <div class="carousel" id="carousel"></div>
         <div class="controls">
-          <button class="btn" id="prevBtn">❮</button>
+          <button class="btn" id="prevBtn">←</button>
           <div class="progress"><div class="progress-bar" id="prog"></div></div>
-          <button class="btn" id="nextBtn">❯</button>
+          <button class="btn" id="nextBtn">→</button>
         </div>
       </div>
     </section>
-
     <section id="plans" class="section plans">
       <div class="section-title">
-        <h2>Soluciones Rapidas</h2>
-        <p>WhatsApp | Facebook | Instagram | Telegram</p>
+        <h2>Soluciones rápidas</h2>
+        <p>WhatsApp · Facebook · Instagram · Telegram</p>
       </div>
       <div class="plans-grid">
         <div class="plan">
-          <div class="plan-icon">💬</div>
-          <h3>WhatsApp/Telegram</h3>
-          <div class="price">$250/cup<span>/inmediato</span></div>
+          <div class="plan-icon">📨</div>
+          <h3>WhatsApp</h3>
+          <div class="price">$300<span>/inmediato</span></div>
           <ul class="features">
-            <li><span class="check">✓</span> publicación en estados</li>
-            <li><span class="check">✓</span> publicación en grupos</li>
-            <li><span class="check">✓</span> publicación en canales</li>
-            <li><span class="check">✓</span> publicación en comunidades</li>
+            <li><span class="check">✓</span>Estados</li>
+            <li><span class="check">✓</span>Grupos</li>
+            <li><span class="check">✓</span>Canales</li>
+            <li><span class="check">✓</span>Comunidades</li>
+            <li><span class="check">✓</span>Flyer Incluido</li>
           </ul>
-          <button class="plan-btn" data-plan="WhatsApp Business">Seleccionar plan</button>
+          <button class="plan-btn" data-plan="WhatsApp/Telegram">Seleccionar</button>
         </div>
         <div class="plan">
-          <div class="plan-icon">📘</div>
-          <h3>Facebook/Instagram</h3>
-          <div class="price">$250/cup<span>/inmediato</span></div>
+          <div class="plan-icon">📨</div>
+          <h3>Pagina web</h3>
+          <div class="price">$150<span>/inmediato</span></div>
           <ul class="features">
-            <li><span class="check">✓</span> publicación en estados</li>
-            <li><span class="check">✓</span> publicación en grupos</li>
-            <li><span class="check">✓</span> publicación en paginas</li>
+            <li><span class="check">✓</span>Póster Destacado</li>
           </ul>
-          <button class="plan-btn" data-plan="Facebook Ads Pro">Seleccionar plan</button>
+          <button class="plan-btn" data-plan="Facebook/Instagram">Seleccionar</button>
         </div>
       </div>
-      <p class="plans-footnote">✦ Planes sin permanencia · Soporte 8 horas</p>
+      <p class="plans-footnote">Sin permanencia · Soporte 8 Horas</p>
     </section>
-
     <section id="contact" class="section contact">
       <div class="section-title">
-        <h2>Publica tu Anuncio</h2>
-        <p>Envíanos tu brief y te asesoramos</p>
+        <h2>Publica tu anuncio</h2>
+        <p>Cuéntanos tu idea en pocas palabras</p>
       </div>
       <div class="form">
         <form id="adForm">
           <div class="form-group">
-            <label>Nombre completo</label>
-            <input type="text" id="name" required placeholder="Ej. María González">
+            <label for="message">Info <span style="font-weight:400;color:var(--text-muted);">Del Anuncio</span></label>
+            <textarea id="message" name="message" required placeholder="Describe tu campaña, objetivos, público..." maxlength="1500" rows="5"></textarea>
+            <div style="text-align:right;font-size:0.8rem;margin-top:6px;color:var(--text-muted);"><span id="charCount">0</span>/1500 caracteres</div>
           </div>
-          <div class="form-group">
-            <label>Email corporativo</label>
-            <input type="email" id="email" required placeholder="maria@empresa.com">
-          </div>
-          <div class="form-group">
-            <label>Empresa / Marca</label>
-            <input type="text" id="company" placeholder="Tu empresa">
-          </div>
-          <div class="form-group">
-            <label>Describe tu objetivo</label>
-            <textarea id="message" required placeholder="Cuéntanos qué necesitas: campaña, branding, leads..."></textarea>
-          </div>
-          <div class="form-group">
-            <label>Adjuntar brief / referencias</label>
-            <div class="file-input">
-              <input type="file" id="files" multiple accept="image/*,video/*,.pdf,.doc,.docx">
-              <div class="file-label" id="fileLabel">📎 Arrastra archivos o haz clic</div>
-            </div>
-          </div>
-          <button type="submit" class="submit">Enviar solicitud →</button>
+          <button type="submit" class="submit">Enviar</button>
         </form>
       </div>
     </section>
   </main>
-
-  <script src="portafolio.js"></script>
-  <script src="planes.js"></script>
-  <script src="contactos.js"></script>
-  <script src="script.js"></script>
+  <script src="portfolio.js"></script>
+  <script>
+    (function(){
+      const sections={gallery:document.getElementById('gallery'),plans:document.getElementById('plans'),contact:document.getElementById('contact')};
+      const navItems=document.querySelectorAll('.nav-item');
+      const navMenu=document.getElementById('navMenu');
+      const mobileToggle=document.getElementById('mobileToggle');
+      const logo=document.querySelector('.logo');
+      function showSection(id){
+        Object.values(sections).forEach(s=>s.classList.remove('active'));
+        sections[id].classList.add('active');
+        navItems.forEach(i=>i.classList.toggle('active',i.dataset.section===id));
+        navMenu.classList.remove('open');
+        if(id==='gallery') PortfolioCarousel.resume();
+        else PortfolioCarousel.pause();
+      }
+      navItems.forEach(i=>i.addEventListener('click',()=>{const s=i.dataset.section;if(s)showSection(s);}));
+      logo.addEventListener('click',()=>showSection('gallery'));
+      mobileToggle.addEventListener('click',()=>navMenu.classList.toggle('open'));
+      document.addEventListener('click',e=>{if(!e.target.closest('.appbar')&&navMenu.classList.contains('open'))navMenu.classList.remove('open');});
+      window.showSection=showSection;
+      const Planes={init(){document.querySelectorAll('.plan-btn').forEach(b=>b.addEventListener('click',()=>{const p=b.dataset.plan;if(p&&typeof showSection==='function'){showSection('contact');const msg=document.getElementById('message');if(msg){msg.value=`Hola, estoy interesado en el plan ${p}. Me gustaría recibir más información.`;document.getElementById('charCount').textContent=msg.value.length;}}}));}};
+      const Contacto={init(){const form=document.getElementById('adForm'),ta=document.getElementById('message'),cc=document.getElementById('charCount');
+        function sanitize(v){return v.replace(/[^\p{L}\p{N}\s,\.]/gu,'');}
+        function updateCount(){cc.textContent=ta.value.length;}
+        ta.addEventListener('input',function(){this.value=sanitize(this.value);updateCount();});
+        updateCount();
+        form.addEventListener('submit',function(e){e.preventDefault();const m=ta.value.trim();if(!m){alert('Describe tu anuncio.');return;}
+          const body=`Solicitud de publicación YOTEPUBLICO%0A%0A📝 Mensaje:%0A${m}%0A%0A--- Yo te publico ---`;
+          window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=agencia.yotepublico@gmail.com&su=${encodeURIComponent('Nueva solicitud de anuncio')}&body=${body}`,'_blank');
+          alert('📬 Se abrirá Gmail con tu mensaje. ¡Gracias!');form.reset();updateCount();});
+      }};
+      document.addEventListener('DOMContentLoaded',()=>{if(typeof PortfolioCarousel!=='undefined')PortfolioCarousel.init();Planes.init();Contacto.init();if(!sections.gallery.classList.contains('active'))PortfolioCarousel.pause();});
+    })();
+  </script>
 </body>
 </html>
